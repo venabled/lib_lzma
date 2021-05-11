@@ -458,7 +458,7 @@ endif()
 
 target_link_extlibraries(${LIB_NAME})
 
-if(UNIX)
+if(UNIX OR ANDROID)
     # On unix-like platforms the library is almost always called lib${PROJECT_NAME}
     if(NOT APPLE AND BUILD_SHARED_LIBS)
         set_target_properties(${LIB_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
