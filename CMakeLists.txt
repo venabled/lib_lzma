@@ -462,7 +462,7 @@ if(UNIX OR ANDROID)
     # On unix-like platforms the library is almost always called lib${PROJECT_NAME}
     if(NOT APPLE AND BUILD_SHARED_LIBS)
         set_target_properties(${LIB_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
-        set_target_properties(${LIB_NAME} PROPERTIES LINK_FLAGS "-Wl,--version-script,\"${CMAKE_CURRENT_SOURCE_DIR}/liblzma.map\"")
+        set_target_properties(${LIB_NAME} PROPERTIES LINK_FLAGS "-Wl,--version-script,\"${CMAKE_CURRENT_SOURCE_DIR}/liblzma/liblzma.map\"")
     endif()
 endif()
 
